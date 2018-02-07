@@ -26,6 +26,7 @@ header {
 @media (max-width : 799px) {
     .tq-container-top{
         background: url(/img/bg-tq-land-vacio.jpg) 0px center !important;
+        background-size: cover !important;
     }
     .imagen-carrito{
         display: block !important;
