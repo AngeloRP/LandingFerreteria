@@ -23,22 +23,57 @@ header {
     min-height: 500px;
 }
 
+.infoFooter{
+    margin-left: 35%;
+    padding-top: 20px !important;
+}
+.iconosInfo{
+    width: 70%;
+    margin-left: 30%;
+}
+.iconosInfo > div {
+   /* display: -webkit-box;*/
+}
+
+.iconosInfo > div > p {
+    /*padding-top: 35px;*/
+    font-size: 15px;
+}
+.iconosInfo > div > h4 {
+    margin-bottom: 0px;
+}
+
+
+
+
 @media (max-width : 799px) {
     .tq-container-top{
         background: url(/img/bg-tq-land-vacio.jpg) 0px center !important;
         background-size: cover !important;
+        padding-top: 139px !important;
     }
     .imagen-carrito{
         display: block !important;
         height: auto;
         width: auto;
     }
+    .infoFooter{
+        margin: 0 auto !important;
+    }
+    .iconosInfo{
+        width:100%;
+        margin-left: 0%;
+    }
 }
 
 .tq-info {
     text-align: right;
+    margin-bottom: 15px;
 }
 
+iframe {
+    right: calc(100% - 420px) !important;
+}
 @media screen and (max-width: 576px){
     .tq-info {
         text-align: center;
@@ -124,7 +159,7 @@ section > div > p {
 }
 
 .tq-container-bottom > div {
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     text-align: center;
     color: #2c73b5;
 }

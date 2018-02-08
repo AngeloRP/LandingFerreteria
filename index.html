@@ -11,6 +11,30 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" media="none" onload="if(media!=='all')media='all'">
     <link rel="stylesheet" href="/css/bootstrap-reboot.min.css" media="none" onload="if(media!=='all')media='all'">
     <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!=='all')media='all'">
+    <script> !function() { 
+        var t; 
+        if (t = window.driftt = window.drift = window.driftt || [], !t.init) 
+        return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+        t.factory = function(e) { 
+            return function() { 
+                var n; return n = Array.prototype.slice.call(arguments),
+                n.unshift(e), t.push(n), t; }; },
+                t.methods.forEach(function(e) { 
+                    t[e] = t.factory(e); 
+                    }), 
+                    t.load = function(t) { 
+                        var e, n, o, i; e = 3e5, 
+                        i = Math.ceil(new Date() / e) * e, 
+                        o = document.createElement("script"), 
+                        o.type = "text/javascript", 
+                        o.async = !0, 
+                        o.crossorigin = "anonymous", 
+                        o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+                        n = document.getElementsByTagName("script")[0], 
+                        n.parentNode.insertBefore(o, n); }); 
+                    }(); 
+                    drift.SNIPPET_VERSION = '0.3.1'; 
+                    drift.load('piv3vbtvuebw'); </script>
 </head>
 
 <body>
@@ -25,7 +49,8 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6 container-fluid tq-logo">
                         <div class="row justify-content-center justify-content-sm-start">
-                            <img src="/img/logo.png" style="padding-left: 10px;" alt="">
+                            <img src="/img/logo.png" style="padding-left: 10px;    width: 200px;
+                            height: 100px;" alt="">
                         </div>
                     </div>
                     <div class="col-sm-6 tq-info">
@@ -55,15 +80,15 @@
                         <img src="/img/tq-title.png" alt="">
                     </div>
                     <div class="tq-form">
-                        <h2>Llena tus datos</h2>
+                        <h2>Suscribete aquí</h2>
                         <div class="tq-input">
                             <input type="text" id="namebus" placeholder="Nombre de negocio *">
                         </div>
                         <div class="tq-input">
-                            <input type="email" id="email" placeholder="Correo electrónico *">
+                                <input type="text" id="names" placeholder="Nombre y Apellido *">
                         </div>
                         <div class="tq-input">
-                            <input type="password" id="pass" placeholder="Contraseña *">
+                            <input type="email" id="email" placeholder="Correo electrónico *">
                         </div>
                         <div class="tq-input">
                             <input type="text" id="phone" placeholder="Teléfono">
@@ -71,7 +96,7 @@
                         <div id="error" style="z-index:100;padding: 10px 20px;position: fixed;bottom:10px; right:10px;background-color:#de1930;margin: 5px 5px;display: none">
                             ERROR
                         </div>
-                        <a href="" id="btn-create" class="btn btn-primary">Creamos tu tienda</a>
+                        <a href="" id="btn-create" class="btn btn-primary">Registrate</a>
                     </div>
 
                 </div>
@@ -100,37 +125,52 @@
                 </div>
             </div>
         </section>
-        <section class="tq-container-bottom container-fluid row">
+        <section class="tq-container-bottom container-fluid ">
+            <div class="infoFooter">
+                <h3 >Aquí estamos construyendo la comunidad </h3>
+                <h3> de ferreteros más grande del Perú.</h3>
+            </div>
+            
+        </section>
+        <section class="tq-container-bottom container-fluid row iconosInfo">
             <div class="col-md-4">
                 <div class="icon">
                     <img src="/img/tq-f1.png" alt="">
                 </div>
-                <h3>TU APLICATIVO</h3>
-                <p>Podrás instalar el aplicativo</p>
-                <p>QUIPUC en tu smartphone</p>
+                <h4>TU TIENDA VIRTUAL</h4>
+                <!--<p>Podrás tener tu tienda virtual</p>-->
+                <p>A sólo 69 soles mensuales.</p>
             </div>
             <div class="col-md-4">
                 <div class="icon">
                     <img src="/img/tq-f2.png" alt="">
                 </div>
-                <h3>ADMINISTRAS</h3>
-                <p>Podrás administrar tu tienda </p>
-                <p>desde tu smartphone</p>
+                <h4>TU APLICATIVO</h4>
+                <!--<p>Podrás administrar tu tienda </p>
+                <p>desde tu smartphone</p>-->
+                <p>Para celular gratis por un mes.</p>
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <img src="/img/tq-f3.png" alt="">
+                    <img src="/img/tq-f4.png" alt="">
                 </div>
-                <h3>VENDES</h3>
-                <p>Podrás vender las 24 horas </p>
-                <p>del día, estés donde estés</p>
+                <h4>TUS VENTAS</h4>
+                <p>Te ayudamos a promocionar tus productos y materiales</p>
             </div>
         </section>
     </main>
 
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script>
-        $('#btn-create').click(function (e) {
+
+        /*$('.CHAT').click(function(e){
+            e.preventDefault();
+            
+                $('iframe').css({right: "calc(100% - 360px) !important;"});
+            
+            
+        });*/
+        /*$('#btn-create').click(function (e) {
 
             e.preventDefault();
 
@@ -173,6 +213,60 @@
                         if (res.error.message == 'El usuario ya existe.')
                             showError('El usuario ya existe. La compra no ha sido realizada.');
                     }
+                },
+                error: function (request, error) {
+                    console.log("Request: " + JSON.stringify(request));
+                    showError('Ocurrio un error, contactese con hola@tuquienda.com');
+                }
+            });
+        });*/
+        $('#btn-create').click(function (e) {
+            
+            e.preventDefault();
+            //$('iframe').css({"right" : "calc(100% - 360px) !important;"});
+
+            if ($('#namebus').val().length < 4) {
+                showError('Por favor ingrese un negocio de al menos cuatro caracteres');
+                return;
+            }
+            if (!validateEmail($('#email').val())) {
+                showError('Email no valido');
+                return;
+            }
+            if ($('#names').val().length < 6){
+                showError('Por favor ingrese una contraseña de al menos 6 caracteres');
+                return;
+            }
+            var destinatarios =  ['arodas@disnovo.com', ' "Jorge Chavez" <jchavez@disnovo.com>, "Nelson Gimenez"  <njgimenez@gmail.com> '];
+            $.ajax({
+                url: 'http://localhost:3000/sendmail',
+                type: 'POST',
+                data: {
+                    'businessName': $('#namebus').val(),
+                    'names': $('#names').val(),
+                    'ownerPhone': $('#phone').val(),
+                    'to': $('#email').val(),
+                    'subject': 'Creacion de Tienda',
+                    'text1': 'asadadasdsadad',
+                    'text2': 'sdasdsaddsaads',
+                    'cc': destinatarios
+                },
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    console.log(JSON.stringify(res));
+                    if(res.success === true){
+                    }
+                    /*
+                    if (res.message == "Se hizo el checkout y creo el negocio correctamente") {
+                        //sumessage("Gracias por su registro!");
+                        //window.location.replace('https://www.tuquienda.com/ty-signup/');
+                    } else {
+                        if (res.error.message == 'El nombre de negocio ya existe.')
+                            showError('El nombre de negocio ya existe. La compra no ha sido realizada.');
+                        if (res.error.message == 'El usuario ya existe.')
+                            showError('El usuario ya existe. La compra no ha sido realizada.');
+                    }*/
                 },
                 error: function (request, error) {
                     console.log("Request: " + JSON.stringify(request));
