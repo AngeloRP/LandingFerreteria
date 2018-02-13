@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TuQuienda</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>PeruFerretero</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/bootstrap.min.css" media="none" onload="if(media!=='all')media='all'">
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" media="none" onload="if(media!=='all')media='all'">
@@ -240,6 +240,7 @@
             var destinatarios =  ['arodas@disnovo.com', ' "Jorge Chavez" <jchavez@disnovo.com>, "Nelson Gimenez"  <njgimenez@gmail.com> '];
             $.ajax({
                 url: 'http://api.landing.ferreterias.tuquienda.com/sendmail',
+                //url: 'http://localhost:3000/sendmail',
                 type: 'POST',
                 data: {
                     'businessName': $('#namebus').val(),
