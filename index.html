@@ -250,8 +250,8 @@
                 showError('Email no valido');
                 return;
             }
-            if ($('#names').val().length < 6){
-                showError('Por favor ingrese una contraseña de al menos 6 caracteres');
+            if ($('#names').val().length < 5){
+                showError('Por favor ingrese nombre y apellidos de al menos 5 caracteres');
                 return;
             }
             var destinatarios =  ['arodas@disnovo.com', ' "Jorge Chavez" <jchavez@disnovo.com>, "Nelson Gimenez"  <njgimenez@gmail.com> '];
@@ -274,6 +274,7 @@
                     console.log(res);
                     console.log(JSON.stringify(res));
                     if(res.success === true){
+                        
                     }
                     /*
                     if (res.message == "Se hizo el checkout y creo el negocio correctamente") {
