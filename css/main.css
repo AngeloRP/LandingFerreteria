@@ -78,6 +78,10 @@ iframe {
     .tq-info {
         text-align: center;
     }
+
+    iframe {
+        right: calc(100% - 415px) !important;
+    }
 }
 
 .tq-container-top {
